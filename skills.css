@@ -1,0 +1,191 @@
+body{
+    background-color: rgb(20, 20, 20);
+    margin: 0;
+  padding: 0;
+}
+.nav{
+  
+  height: 15vh;
+  background-color: rgb(0, 0, 0);
+  color: wheat;
+  box-sizing: border-box;
+  
+
+}
+.nav h3{
+    padding: 0;
+    margin: 0;
+}
+
+nav .name{
+    padding-left: 25px;
+     background: linear-gradient(90deg, #ff0000 40%,
+      #0392d9 80%
+     );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family:cursive;
+}
+
+.nav nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(24, 23, 23);
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding-right: 50px;
+}
+.nav ul li{
+    padding: 7px;
+}
+
+
+.nav{
+    display: inline;
+}
+
+
+
+.b{
+cursor: pointer;
+ background-color: rgb(189, 187, 187,0.6);
+    border-radius: 10px;
+}
+
+.a:hover, .c:hover, .d:hover{
+    background-color: rgb(189, 187, 187,0.6);
+    border-radius: 10px;
+}
+
+.c,.d,.a{
+cursor: pointer;
+}
+
+h1{
+    text-align: center;
+background: linear-gradient(90deg, #0392d9 40%, #ff0000 67%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+ 
+}
+
+table {
+  width: 95%;
+  height: 40vh;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th{
+  padding: 10px;
+  text-align: left;
+  color: wheat;
+}
+
+td{
+    background: rgb(138, 194, 219);
+    color: black;
+    padding: 10px;
+}
+
+thead {
+  background-color: #0392d9;
+  color: white;
+}
+
+.left{
+    height: 50vh;
+    width: 70;
+    border: 2px solid#ffff;
+    color: white;
+}
+
+.spoken{
+   margin-left: 58rem;
+}
+.concept{
+    margin-left: 45rem;
+    margin-bottom: 1000rem;
+}
+
+/* For tablets and small screens */
+@media screen and (max-width: 1024px) {
+    .nav ul {
+        gap: 15px;
+        padding-right: 20px;
+    }
+
+    .button button {
+        width: 40%;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .centerName h1 {
+        font-size: 2rem;
+    }
+
+    .centerName p {
+        font-size: 1rem;
+    }
+    
+    .boxes {
+        grid-template-columns: 1fr; /* Single column for projects */
+        gap: 15px;
+    }
+
+    .box1, .box2, .box3 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 600px) {
+    .nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .button {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button button {
+        width: 80%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .centerName h1 {
+        font-size: 1.5rem;
+    }
+
+    .centerName p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
