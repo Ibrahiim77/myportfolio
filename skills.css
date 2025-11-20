@@ -204,7 +204,7 @@ thead {
         right: 0; /* slide in when active */
     }
     .sidebar ul {
-        margin-right: 20%;
+        margin-right: 20% ;
         display: block;
         list-style: none;
         padding: 0;
@@ -235,14 +235,13 @@ thead {
     margin-top: 35%;
     height: 50vh;
     width: 113%;
-    border: 2px solid#ffff;
-    color: white;
+    border: none;
 }
 table {
-    width: 100%;
+   
   height: 40vh;
   margin: 20px auto;
-  border-collapse: collapse;
+
   font-family: Arial, sans-serif;
 }
 
