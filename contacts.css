@@ -104,69 +104,118 @@ nav .name{
     transform: scale(1.08);
 }
 
-/* For tablets and small screens */
-@media screen and (max-width: 1024px) {
-    .nav ul {
-        gap: 15px;
-        padding-right: 20px;
-    }
-
-    .button button {
-        width: 40%;
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .centerName h1 {
-        font-size: 2rem;
-    }
-
-    .centerName p {
-        font-size: 1rem;
-    }
-    
-    .boxes {
-        grid-template-columns: 1fr; /* Single column for projects */
-        gap: 15px;
-    }
-
-    .box1, .box2, .box3 {
-        width: 100%;
-        height: auto;
-    }
+.navimg{
+    display: none;
+}
+.sidebar{
+    display: none;
 }
 
 /* For mobile phones */
 @media screen and (max-width: 600px) {
-    .nav {
-        height: auto;
+     .nav {
+        
         padding: 10px 0;
+    }
+    .nav nav{
+        height: 10vh;
+    }
+    nav{
+        display: flex;
+       
+    }
+    
+    .name{
+        font-size: 12px;
+    }
+    .navimg{
+        display: block;
+        margin-right: 7%;
+        width: 8%;
     }
 
     .nav ul {
-        flex-direction: column;
+        display: none;
         gap: 10px;
         padding-right: 0;
         text-align: center;
     }
 
+
     .button {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        margin-top: 10%;
     }
 
     .button button {
-        width: 80%;
+        width: 40%;
         padding: 12px;
-        font-size: 14px;
+        font-size: 10px;
+        margin-top: 2%;
+       
     }
 
     .centerName h1 {
         font-size: 1.5rem;
+        margin-top: 23%;
+        margin-right: 2%;
+        
+    }
+  
+    .centerName p {
+        margin-right: 2%;
+        font-size: 0.9rem;
+        margin-top: 10%;
+    }
+    .navbox{
+        background-color: black;
+        margin-left: 50%;
+        margin-top: 5%;
+        width: 50%;
+        height: 100vh;
+    }
+    .sidebar img{
+        margin-left:70% ;
+        display: block;
+    }
+     .sidebar {
+        display: block; /* show on mobile */
+        position: fixed;
+        top: 0;
+        right:-250px; /* hidden initially */
+        width: 250px;
+        height: 100%;
+        background-color: #222;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1000;
     }
 
-    .centerName p {
-        font-size: 0.9rem;
+    .sidebar.active {
+        right: 0; /* slide in when active */
     }
+    .sidebar ul {
+        display: block;
+        list-style: none;
+        padding: 0;
+         margin-right: 20%;
+        
+    }
+
+    .sidebar ul li {
+        margin: 20px 0;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .sidebar ul li:hover {
+        color: #ff6600;
+    }
+    
 }
 

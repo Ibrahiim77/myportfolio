@@ -184,7 +184,7 @@ cursor: pointer;
     }
 
     .centerName h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin-top: 23%;
         margin-right: 2%;
         
@@ -192,7 +192,7 @@ cursor: pointer;
   
     .centerName p {
         margin-right: 2%;
-        font-size: 0.6rem;
+        font-size: 0.9rem;
         margin-top: 10%;
     }
     .navbox{
@@ -226,7 +226,8 @@ cursor: pointer;
         display: block;
         list-style: none;
         padding: 0;
-        margin: 0;
+         margin-right: 20%;
+        
     }
 
     .sidebar ul li {

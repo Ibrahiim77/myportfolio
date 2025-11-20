@@ -11,6 +11,7 @@
     <div class="nav">
             <nav>
                <h3 class="name">Muhammad Ibrahim</h3>
+                <img src="image/nav.png" class="navimg" alt="" id="nav">
 
                <ul>
                 <div class="a">
@@ -29,6 +30,15 @@
                 
                </ul>
             </nav>
+            <div class="sidebar" id="sidebar">
+                <img src="image/nav.png" alt="" id="navb" class="navb">
+            <ul>
+               <li class="about">About</li>
+                <li class="skills">Skills</li>
+                <li class="project">Projects</li>
+                <li class="contact">Contact</li>
+            </ul>
+        </div>
         </div>
 
     <div class="container">
@@ -87,7 +97,32 @@
     </div>
 
 
-    <script src="index.js"></script>
+    <script>
+         document.querySelector(".a").onclick = () => { window.location.href = "index.html"; };
+  document.querySelector(".b").onclick = () => { window.location.href = "skills.html"; };
+  document.querySelector(".d").onclick = () => { window.location.href = "projects.html"; };
+  document.querySelector(".c").onclick = () => { window.location.href = "contacts.html"; };
+
+  document.querySelector(".about").onclick = () => { window.location.href = "index.html"; };
+  document.querySelector(".skills").onclick = () => { window.location.href = "skills.html"; };
+  document.querySelector(".project").onclick = () => { window.location.href = "projects.html"; };
+  document.querySelector(".contact").onclick = () => { window.location.href = "contacts.html"; };
+
+
+  const navToggleO = document.getElementById('nav');
+  const sidebar = document.getElementById('sidebar');
+  const navToggleB = document.getElementById('navb');
+
+  navToggleO.addEventListener('click', ()=> {
+
+    sidebar.classList.toggle('active')
+  });
+
+  navToggleB.addEventListener('click', ()=> {
+
+    sidebar.classList.remove('active')
+  });
+    </script>
     
 </body>
 </html>

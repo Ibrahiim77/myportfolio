@@ -36,10 +36,10 @@
              <div class="sidebar" id="sidebar">
                 <img src="image/nav.png" alt="" id="navb" class="navb">
             <ul>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact</li>
+              <li class="about">About</li>
+                <li class="skills">Skills</li>
+                <li class="project">Projects</li>
+                <li class="contact">Contact</li>
             </ul>
         </div>
         </div>
@@ -50,7 +50,7 @@
             <p>Software Engineering Student | Aspring Web Developer</p>
 
             <div class="button">
-                <button id="GoToprojects">View Projects</button>
+                <button class="GoToproject">View Projects</button>
                 <button>Download Resume</button>
             </div>
         </div>
@@ -58,7 +58,36 @@
         
     </div>
 
-    <script src="index.js"></script>
+    <script>
+         document.querySelector(".a").onclick = () => { window.location.href = "index.html"; };
+  document.querySelector(".b").onclick = () => { window.location.href = "skills.html"; };
+  document.querySelector(".d").onclick = () => { window.location.href = "projects.html"; };
+  document.querySelector(".c").onclick = () => { window.location.href = "contacts.html"; };
+
+  
+  document.querySelector(".GoToproject").onclick = () => { window.location.href = "projects.html"; };
+
+  document.querySelector(".about").onclick = () => { window.location.href = "index.html"; };
+  document.querySelector(".skills").onclick = () => { window.location.href = "skills.html"; };
+  document.querySelector(".project").onclick = () => { window.location.href = "projects.html"; };
+  document.querySelector(".contact").onclick = () => { window.location.href = "contacts.html"; };
+
+
+
+  const navToggleO = document.getElementById('nav');
+  const sidebar = document.getElementById('sidebar');
+  const navToggleB = document.getElementById('navb');
+
+  navToggleO.addEventListener('click', ()=> {
+
+    sidebar.classList.toggle('active')
+  });
+
+  navToggleB.addEventListener('click', ()=> {
+
+    sidebar.classList.remove('active')
+  });
+    </script>
     
 </body>
 </html>
