@@ -219,6 +219,53 @@ cursor: pointer;
         font-size: 0.6rem;
         margin-top: 10%;
     }
+    .navbox{
+        background-color: black;
+        margin-left: 50%;
+        margin-top: 5%;
+        width: 50%;
+        height: 100vh;
+    }
+    .sidebar img{
+        margin-left:70% ;
+    }
+     .sidebar {
+        display: block; /* show on mobile */
+        position: fixed;
+        top: 0;
+        right:-250px; /* hidden initially */
+        width: 250px;
+        height: 100%;
+        background-color: #222;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        right: 0; /* slide in when active */
+    }
+    .sidebar ul {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar ul li {
+        margin: 20px 0;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .sidebar ul li:hover {
+        color: #ff6600;
+    }
+    
 }
 
 
