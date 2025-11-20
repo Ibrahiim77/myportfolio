@@ -204,6 +204,7 @@ cursor: pointer;
     }
     .sidebar img{
         margin-left:70% ;
+        display: block;
     }
      .sidebar {
         display: block; /* show on mobile */
