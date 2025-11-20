@@ -148,20 +148,7 @@ thead {
     }
 
 
-    .button {
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 10%;
-    }
-
-    .button button {
-        width: 40%;
-        padding: 12px;
-        font-size: 10px;
-        margin-left: 28%;
-        margin-top: 2%;
-       
-    }
+    
 
     .centerName h1 {
         font-size: 1rem;
@@ -225,14 +212,14 @@ thead {
     }
 
     .container h1{
-        margin-top: 20%;
+        margin-top: 23%;
         position: fixed;
         top: 0;
         margin-left: 50%;
      }
     .left{
 
-    margin-top: 35%;
+    margin-top: 50%;
     height: 50vh;
     width: 113%;
     border: none;
