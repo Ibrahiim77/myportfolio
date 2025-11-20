@@ -129,37 +129,13 @@ cursor: pointer;
   display: none;
 }
 
-/* For tablets and small screens */
-@media screen and (max-width: 1024px) {
-    .nav ul {
-        gap: 15px;
-        padding-right: 20px;
-    }
-
-    .button button {
-        width: 40%;
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .centerName h1 {
-        font-size: 2rem;
-    }
-
-    .centerName p {
-        font-size: 1rem;
-    }
-    
-    .boxes {
-        grid-template-columns: 1fr; /* Single column for projects */
-        gap: 15px;
-    }
-
-    .box1, .box2, .box3 {
-        width: 100%;
-        height: auto;
-    }
+.navb{
+    display: none;
 }
+.sidebar{
+    display: none;
+}
+
 
 /* For mobile phones */
 @media screen and (max-width: 600px) {
