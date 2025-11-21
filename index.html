@@ -51,7 +51,7 @@
 
             <div class="button">
                 <button class="GoToproject">View Projects</button>
-                <button>Download Resume</button>
+                <button class="downloadResume">Download Resume</button>
             </div>
         </div>
         
@@ -71,6 +71,16 @@
   document.querySelector(".skills").onclick = () => { window.location.href = "skills.html"; };
   document.querySelector(".project").onclick = () => { window.location.href = "projects.html"; };
   document.querySelector(".contact").onclick = () => { window.location.href = "contacts.html"; };
+
+  document.querySelector(".downloadResume").onclick = () => {
+    const link = document.createElement("a");
+    link.href = "resume.pdf"; // your file path
+    link.download = "Muhammad_Ibrahim_Resume.pdf"; // file name when downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+</script>
 
 
 
