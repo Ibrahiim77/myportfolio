@@ -49,11 +49,11 @@
             <p>Software Engineering Student | Aspring Web Developer</p>
 
             <div class="button">
-                <a href="https://www.linkedin.com/in/mohammad-ibrahim77/" target="_blank">
-                <button>LinkedIn</button></a>
+                
+                <button id="linkedinBtn">LinkedIn</button>
 
-               <a href="mailto:ibrahimjkxd@gmail.com" target="_blank"> <button title="ibrahimjkxd@gmail.com">Email</button>
-                </a>
+               <button title="ibrahimjkxd@gmail.com" id="emailBtn">Email</button>
+                
             </div>
         </div>
         
@@ -85,6 +85,39 @@
 
     sidebar.classList.remove('active')
   });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const email = "ibrahimjkxd@gmail.com";
+    const emailBtn = document.getElementById("emailBtn");
+    const linkedinBtn = document.getElementById('linkedinBtn');
+
+    emailBtn.addEventListener("click", () => {
+
+        // Try mailto link
+        window.location.href = "mailto:" + email;
+
+        // Fallback after 400ms (in case mailto fails → blank page issue)
+        setTimeout(() => {
+            window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=" + email,
+                "_blank"
+            );
+        }, 400);
+
+        
+
+    });
+
+    linkedinBtn.addEventListener("click", (e) => {
+
+        e.preventDefault();
+        window.location.href = "https://www.linkedin.com/in/mohammad-ibrahim77/", "_blank";
+
+    });
+});
+
     </script>
     
 </body>
