@@ -123,10 +123,9 @@ h1{
         top: 0;
         width: 100%;
     }
-    nav{
-      
-       
-    }
+   .container{
+    width: 96%;
+   }
     
     .name{
         font-size: 12px;
