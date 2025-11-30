@@ -114,142 +114,110 @@ thead {
 }
 
 
-/* For mobile phones */
+/* --------- MOBILE FIX ONLY (NO DESKTOP CHANGES) --------- */
 @media screen and (max-width: 600px) {
-     .nav {
-        
+
+    /* Keep your navbar fixed and clean */
+    .nav {
         padding: 10px 0;
+        height: auto;
     }
+
     .nav nav{
         height: 10vh;
         position: fixed;
         top: 0;
         width: 100%;
+        left: 0;
+        z-index: 1000;
+        background-color: rgb(24,23,23);
+        padding: 0 10px;
     }
-    nav{
-      
-       
-    }
-    
+
+    /* Make name smaller */
     .name{
-        font-size: 12px;
+        font-size: 13px !important;
+        padding-left: 10px !important;
     }
+
+    /* Show hamburger icon */
     .navimg{
         display: block;
-        margin-right: 7% ;
-        width: 8%;
+        margin-right: 15px;
+        width: 30px;
+        cursor: pointer;
     }
 
+    /* Hide desktop menu */
     .nav ul {
         display: none;
-        gap: 10px;
-        padding-right: 0;
-        text-align: center;
     }
 
-
-    
-
-    .centerName h1 {
-        font-size: 1rem;
-        margin-top: 23%;
-        margin-right: 2%;
-        
-    }
-  
-    .centerName p {
-        margin-right: 2%;
-        font-size: 0.6rem;
-        margin-top: 10%;
-    }
-    .navbox{
-        background-color: black;
-        margin-left: 50%;
-        margin-top: 5%;
-        width: 50%;
-        height: 100vh;
-    }
-    .sidebar img{
-       
-        margin-left:70%;
+    /* Sidebar menu */
+    .sidebar {
         display: block;
-    }
-     .sidebar {
-        display: block; /* show on mobile */
         position: fixed;
         top: 0;
-        right:-250px; /* hidden initially */
+        right: -250px;
         width: 250px;
         height: 100%;
         background-color: #222;
         padding-top: 60px;
         transition: right 0.3s ease;
-        z-index: 1000;
+        z-index: 2001;
     }
 
     .sidebar.active {
-        right: 0; /* slide in when active */
+        right: 0;
     }
-    .sidebar ul {
-        margin-right: 20% ;
+
+    .sidebar img{
         display: block;
-        list-style: none;
+        width: 25px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .sidebar ul {
+        display: block;
         padding: 0;
+        list-style: none;
+        text-align: center;
     }
 
     .sidebar ul li {
         margin: 20px 0;
-        text-align: center;
-        color: white;
         font-size: 18px;
-        font-weight: bold;
+        color: white;
         cursor: pointer;
-        transition: color 0.3s;
     }
 
-    .sidebar ul li:hover {
-        color: #ff6600;
+    /* Title adjustment so it doesn't hide behind fixed nav */
+    h1{
+        margin-top: 100px;
+        font-size: 1.3rem;
     }
 
-    .container h1{
-        margin-top: 23%;
-        position: fixed;
-        top: 0;
-        margin-left: 50%;
-     }
+    /* Left section full width */
     .left{
+        margin-top: 20px;
+        width: 100% !important;
+        height: auto;
+        border: none;
+    }
 
-    margin-top: 50%;
-    height: 50vh;
-    width: 113%;
-    border: none;
-}
-table {
-   
-  height: 40vh;
-  margin: 20px auto;
+    /* Table responsive */
+    table {
+        width: 100%;
+        font-size: 0.8rem;
+        margin-top: 10px;
+    }
 
-  font-family: Arial, sans-serif;
-}
-
-th{
-    
-  padding: 10px;
-  text-align: left;
-  color: wheat;
-}
-
-td{
-    background: rgb(138, 194, 219);
-    color: black;
-    padding: 10px;
-}
-
-thead {
-    
-  background-color: #0392d9;
-  color: white;
-}
+    th, td {
+        padding: 7px;
+    }
 }
 
 
