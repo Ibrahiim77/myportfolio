@@ -35,8 +35,7 @@ export const projectsData = [
       "⚡ Fast API endpoints & optimized database query execution"
     ],
     links: {
-      demo: "https://connect-hub-client-theta.vercel.app",
-      github: "https://github.com/ibrahiim77"
+      demo: "https://connect-hub-client-theta.vercel.app"
     }
   },
   {
