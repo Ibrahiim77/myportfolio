@@ -15,34 +15,30 @@ export const personalInfo = {
   ]
 };
 
-export const featuredProject = {
-  id: "connecthub",
-  title: "ConnectHub",
-  subtitle: "Full-Stack Real-Time Communication & Social Platform",
-  category: "Full Stack",
-  featured: true,
-  status: "Featured Project",
-  badge: "Recent Highlight",
-  description: "ConnectHub is a full-stack real-time messaging and social workspace built to deliver seamless instant communication, dynamic user rooms, authenticated profiles, and real-time status updates.",
-  longDescription: "Designed with modern software engineering practices, ConnectHub enables users to create chat channels, exchange real-time messages with low latency, manage profile preferences, and stay connected across devices. The application features a clean glassmorphism dashboard, dynamic socket handlers, secure JWT authentication, and structured database persistence.",
-  techStack: ["React.js", "Node.js", "Express.js", "Socket.io", "MongoDB", "CSS3 / Modern UI", "REST APIs"],
-  keyFeatures: [
-    "⚡ Real-time instant messaging powered by WebSockets / Socket.io",
-    "🔒 Secure User Authentication & JWT session handling",
-    "🎨 Modern responsive UI with dark glassmorphism styling",
-    "💬 Dynamic chat channels & private messaging streams",
-    "🌐 Real-time online/offline user status indicator",
-    "⚡ Fast API endpoints & optimized database query execution"
-  ],
-  links: {
-    github: "https://github.com/ibrahiim77",
-    demo: "#connecthub-demo",
-    linkedin: "https://www.linkedin.com/in/mohammad-ibrahim77/"
-  }
-};
-
 export const projectsData = [
-  featuredProject,
+  {
+    id: "connecthub",
+    title: "ConnectHub",
+    subtitle: "Full-Stack Real-Time Communication Platform",
+    category: "Full Stack",
+    featured: true,
+    badge: "Featured Project",
+    description: "ConnectHub is a full-stack real-time messaging platform built to deliver seamless instant communication, user authentication, and real-time status updates.",
+    longDescription: "Designed with modern software engineering practices, ConnectHub enables users to create chat channels, exchange real-time messages with low latency, manage profile preferences, and stay connected across devices. Features a clean dark glassmorphism dashboard, WebSocket handlers, secure JWT authentication, and database persistence.",
+    techStack: ["React.js", "Node.js", "Express.js", "Socket.io", "MongoDB", "CSS3 / Modern UI", "REST APIs"],
+    keyFeatures: [
+      "⚡ Real-time instant messaging powered by WebSockets / Socket.io",
+      "🔒 Secure User Authentication & JWT session handling",
+      "🎨 Modern responsive UI with dark glassmorphism styling",
+      "💬 Dynamic chat channels & private messaging streams",
+      "🌐 Real-time online/offline user status indicator",
+      "⚡ Fast API endpoints & optimized database query execution"
+    ],
+    links: {
+      github: "https://github.com/ibrahiim77",
+      demo: "https://github.com/ibrahiim77"
+    }
+  },
   {
     id: "alkhidmat-reservation",
     title: "Al-Khidmat Board & Vehicle Reservation System",

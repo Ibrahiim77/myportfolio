@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Menu, X, Code, Sparkles } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
+import { Download, Menu, X, Code } from 'lucide-react';
 
 export default function Navbar({ onDownloadResume }) {
   const [scrolled, setScrolled] = useState(false);
@@ -11,7 +10,7 @@ export default function Navbar({ onDownloadResume }) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      const sections = ['hero', 'connecthub', 'projects', 'skills', 'experience', 'contact'];
+      const sections = ['hero', 'projects', 'skills', 'experience', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -33,7 +32,6 @@ export default function Navbar({ onDownloadResume }) {
 
   const navLinks = [
     { name: 'About', href: '#hero' },
-    { name: 'ConnectHub', href: '#connecthub', isBadge: true },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
@@ -115,21 +113,6 @@ export default function Navbar({ onDownloadResume }) {
                 }}
               >
                 {link.name}
-                {link.isBadge && (
-                  <span 
-                    style={{
-                      fontSize: '0.65rem',
-                      padding: '2px 7px',
-                      borderRadius: '10px',
-                      background: 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)',
-                      color: '#fff',
-                      fontWeight: 700,
-                      textTransform: 'uppercase'
-                    }}
-                  >
-                    NEW
-                  </span>
-                )}
                 {isActive && (
                   <span
                     style={{
@@ -218,9 +201,6 @@ export default function Navbar({ onDownloadResume }) {
               }}
             >
               <span>{link.name}</span>
-              {link.isBadge && (
-                <span style={{ fontSize: '0.7rem', padding: '2px 8px', borderRadius: '10px', background: '#10b981', color: '#fff' }}>NEW</span>
-              )}
             </a>
           ))}
           <button

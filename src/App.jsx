@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ConnectHubSpotlight from './components/ConnectHubSpotlight';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
@@ -52,7 +51,6 @@ export default function App() {
       {/* Main Content Sections */}
       <main>
         <Hero onDownloadResume={handleDownloadResume} />
-        <ConnectHubSpotlight onSelectProject={setSelectedProject} />
         <Projects onSelectProject={setSelectedProject} />
         <Skills />
         <Experience />

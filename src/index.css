@@ -1,14 +1,14 @@
 /* ==========================================================================
-   MUHAMMAD IBRAHIM - PORTFOLIO DESIGN SYSTEM & GLOBAL STYLES
+   MUHAMMAD IBRAHIM - PORTFOLIO DESIGN SYSTEM & CROSS-BROWSER STYLES
    ========================================================================== */
 
 :root {
   --bg-dark: #090d16;
-  --bg-card: rgba(17, 24, 39, 0.7);
-  --bg-card-hover: rgba(30, 41, 59, 0.8);
-  --bg-glass: rgba(15, 23, 42, 0.65);
+  --bg-card: rgba(17, 24, 39, 0.75);
+  --bg-card-hover: rgba(30, 41, 59, 0.85);
+  --bg-glass: rgba(15, 23, 42, 0.7);
   --border-glass: rgba(255, 255, 255, 0.1);
-  --border-glow: rgba(99, 102, 241, 0.3);
+  --border-glow: rgba(99, 102, 241, 0.35);
 
   --primary: #6366f1;
   --primary-hover: #4f46e5;
@@ -23,9 +23,9 @@
   --text-muted: #94a3b8;
   --text-dim: #64748b;
 
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-code: 'Fira Code', monospace;
+  --font-heading: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-code: 'Fira Code', Consolas, Monaco, monospace;
 
   --nav-height: 80px;
   --radius-sm: 8px;
@@ -37,7 +37,7 @@
   --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Reset & Base Setup */
+/* Reset & Cross-Browser Setup */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -47,6 +47,7 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -58,6 +59,13 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Media Elements */
+img, svg, video, canvas {
+  display: block;
+  max-width: 100%;
 }
 
 /* Custom Scrollbar */
@@ -68,7 +76,7 @@ body {
   background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.35);
   border-radius: var(--radius-full);
   border: 2px solid var(--bg-dark);
 }
@@ -86,12 +94,14 @@ h1, h2, h3, h4, h5, h6 {
 .gradient-text {
   background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #38bdf8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-cyan {
   background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -142,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
 }
 
-/* Glassmorphism Card Style */
+/* Glassmorphism Card Style with Browser Fallback */
 .glass-card {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
@@ -150,12 +160,12 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  transition: all var(--transition-smooth);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .glass-card:hover {
   border-color: var(--border-glow);
-  box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.15);
+  box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.18);
   transform: translateY(-4px);
 }
 
@@ -175,6 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all var(--transition-smooth);
   border: none;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-primary {
@@ -222,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1);
 }
 
-/* Animations Keyframes */
+/* Keyframe Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }

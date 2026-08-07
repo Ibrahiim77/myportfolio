@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Download, Linkedin, Github, Sparkles, Code2, Terminal, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Download, Linkedin, Github, Terminal, Mail } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Hero({ onDownloadResume }) {
@@ -91,14 +91,14 @@ export default function Hero({ onDownloadResume }) {
 
             {/* CTA Buttons */}
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '40px' }}>
-              <a href="#connecthub" className="btn btn-primary btn-glow">
-                <Sparkles size={18} />
-                <span>Explore ConnectHub</span>
+              <a href="#projects" className="btn btn-primary btn-glow">
+                <span>View Projects</span>
                 <ArrowRight size={18} />
               </a>
 
-              <a href="#projects" className="btn btn-secondary">
-                <span>View Projects</span>
+              <a href="#contact" className="btn btn-secondary">
+                <Mail size={18} />
+                <span>Get In Touch</span>
               </a>
 
               <button onClick={onDownloadResume} className="btn btn-secondary" style={{ gap: '8px' }}>
@@ -188,9 +188,6 @@ export default function Hero({ onDownloadResume }) {
                 </p>
                 <p style={{ paddingLeft: '20px' }}>
                   <span style={{ color: '#94a3b8' }}>role:</span> <span style={{ color: '#a7f3d0' }}>"Full Stack Web Developer"</span>,
-                </p>
-                <p style={{ paddingLeft: '20px' }}>
-                  <span style={{ color: '#94a3b8' }}>featuredProject:</span> <span style={{ color: '#a7f3d0' }}>"ConnectHub Realtime Chat"</span>,
                 </p>
                 <p style={{ paddingLeft: '20px' }}>
                   <span style={{ color: '#94a3b8' }}>coreTech:</span> [<span style={{ color: '#fde047' }}>"React"</span>, <span style={{ color: '#fde047' }}>"Node.js"</span>, <span style={{ color: '#fde047' }}>"MySQL"</span>, <span style={{ color: '#fde047' }}>"Java"</span>],
