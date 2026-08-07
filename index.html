@@ -1,100 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dynapuff&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-    
-    <div class="nav">
-        
-            <nav>
-               <h3 class="name">Muhammad Ibrahim</h3>
-
-               <img src="image/nav.png" class="navimg" alt="" id="nav">
-               <ul>
-                <div class="a">
-                    <li w>About</li>
-                </div>
-                <div class="b">
-                  <li>  Skills </li>
-                </div>
-                <div class="d">
-                    <li>Projects</li>
-                </div>
-    
-                <div class="c">
-                 <li>Contact</li>
-                </div>
-                
-               </ul>
-            </nav>
-             <div class="sidebar" id="sidebar">
-                <img src="image/nav.png" alt="" id="navb" class="navb">
-            <ul>
-              <li class="about">About</li>
-                <li class="skills">Skills</li>
-                <li class="project">Projects</li>
-                <li class="contact">Contact</li>
-            </ul>
-        </div>
-        </div>
-
-    <div class="container">
-        <div class="centerName">
-            <h1 class=""> Hi, I'm Muhammad Ibrahim</h1>
-            <p>Software Engineering Student | Aspring Web Developer</p>
-
-            <div class="button">
-                <button class="GoToproject">View Projects</button>
-                <button class="downloadResume">Download Resume</button>
-            </div>
-        </div>
-        
-        
-    </div>
-
-    <script>
-         document.querySelector(".a").onclick = () => { window.location.href = "index.html"; };
-  document.querySelector(".b").onclick = () => { window.location.href = "skills.html"; };
-  document.querySelector(".d").onclick = () => { window.location.href = "projects.html"; };
-  document.querySelector(".c").onclick = () => { window.location.href = "contacts.html"; };
-
-  
-  document.querySelector(".GoToproject").onclick = () => { window.location.href = "projects.html"; };
-
-  document.querySelector(".about").onclick = () => { window.location.href = "index.html"; };
-  document.querySelector(".skills").onclick = () => { window.location.href = "skills.html"; };
-  document.querySelector(".project").onclick = () => { window.location.href = "projects.html"; };
-  document.querySelector(".contact").onclick = () => { window.location.href = "contacts.html"; };
-
-  document.querySelector(".downloadResume").onclick = () => {
-    const link = document.createElement("a");
-    link.href = "resume.pdf"; // your file path
-    link.download = "Muhammad_Ibrahim_Resume.pdf"; // file name when downloaded
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-};
-
-  const navToggleO = document.getElementById('nav');
-  const sidebar = document.getElementById('sidebar');
-  const navToggleB = document.getElementById('navb');
-
-  navToggleO.addEventListener('click', ()=> {
-
-    sidebar.classList.toggle('active')
-  });
-
-  navToggleB.addEventListener('click', ()=> {
-
-    sidebar.classList.remove('active')
-  });
-    </script>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Ibrahim | Software Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Muhammad Ibrahim - Software Engineering Student, Full-Stack Developer featuring ConnectHub, Al-Khidmat Internship, Crypto UI, and web projects." />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
